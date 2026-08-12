@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Todo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <div class="titlebar">
+    <div class="tab"><span class="tab-dot"></span>TodoApp</div>
+    <div class="save-indicator" id="saveIndicator">saved</div>
+  </div>
+
+  <div class="composer">
+    <span class="prompt">&gt;</span>
+    <input id="taskInput" type="text" placeholder="add a task and enter" autocomplete="off" maxlength="200" />
+  </div>
+
+  <div class="tabs" id="filterTabs">
+    <button class="tab-btn active" data-filter="all">all <span class="count" id="countAll">0</span></button>
+    <button class="tab-btn" data-filter="active">active <span class="count" id="countActive">0</span></button>
+    <button class="tab-btn" data-filter="completed">completed <span class="count" id="countCompleted">0</span></button>
+  </div>
+
+  <ul class="task-list" id="taskList"></ul>
+
+  <div class="statusbar">
+    <span id="itemsLeft">0 task left</span>
+    <button class="link-btn" id="clearCompleted">clear completed</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
